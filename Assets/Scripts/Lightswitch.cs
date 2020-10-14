@@ -6,7 +6,7 @@ public class Lightswitch : MonoBehaviour{
     // Start is called before the first frame update
     int counter = 0;
     void Start(){
-        light = GetComponent<Light>();
+        GetComponent<Light>();
     }
 
     // Update is called once per frame
@@ -15,20 +15,20 @@ public class Lightswitch : MonoBehaviour{
             counter++;
             if(counter == 1)
             {
-                light.color = red;
+                GetComponent<Light>().color = Color.red;
             }
             else if (counter == 2)
             {
-                light.color = blue;
+                GetComponent<Light>().color = Color.blue;
             }
             else if (counter == 3)
             {
-                light.color = green;
+                GetComponent<Light>().color = Color.green;
                 counter = 0;
             }
             else
             {
-                light.color = purple;
+                GetComponent<Light>().color = Color.white;
             }
         }
     }
