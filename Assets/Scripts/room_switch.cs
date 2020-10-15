@@ -17,6 +17,14 @@ public class room_switch : MonoBehaviour
         {
             transform.position = new Vector3(6, 11, 21);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                        Application.Quit();
+            #endif
+        }
     }
 
 }
