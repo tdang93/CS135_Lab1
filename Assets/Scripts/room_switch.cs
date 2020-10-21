@@ -13,7 +13,7 @@ public class room_switch : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("1"))
         {
             transform.position = new Vector3(6, 11, 21);
         }
