@@ -11,7 +11,7 @@ public class TriggerGame : MonoBehaviour {
     private int prev;
     public int curr;
     public int point;
-    public Text Score;
+    public Text Score1, Score2, Score3, Score4;
 
     private void Start() {
         /*
@@ -27,7 +27,10 @@ public class TriggerGame : MonoBehaviour {
         prev = 0;
         curr = 0;
         point = 0;
-        Score.text = "Points: 0";
+        Score1.text = "Points: 0";
+        Score2.text = "Points: 0";
+        Score3.text = "Points: 0";
+        Score4.text = "Points: 0";
     }
 
     
@@ -41,7 +44,8 @@ public class TriggerGame : MonoBehaviour {
     }
 
     public void GetPoint() {
-        Score.text = "Points: " + ++point;
+        Score1.text = "Points: " + ++point;
+        Score4.text = Score3.text = Score2.text = Score1.text;
         timer = 0f;
         LightRandomly();
     }
