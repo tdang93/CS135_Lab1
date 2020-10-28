@@ -21,9 +21,11 @@ public class Player : MonoBehaviour {
 
     private void FixedUpdate() {
         if(B_pressed) {
-            Application.Quit(); 
-            EditorApplication.isPlaying = false;
-            Debug.Log("\"B\" pressed. Quitting the game!");
+            #if UNITY_EDITOR
+                        UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                        Application.Quit();
+            #endif
         }
     }
 
