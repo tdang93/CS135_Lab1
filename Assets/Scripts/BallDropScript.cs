@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class BallDropScript : MonoBehaviour
 {
-    public GameObject ball;
+    public GameObject b;
     void OnTriggerEnter(Collider other)
     {
-        ball.GetComponent<Rigidbody>();
-        ball.rigidbody.useGravity = true;
+        b.GetComponent<Rigidbody>().useGravity = true;
     }
-
 }
 
